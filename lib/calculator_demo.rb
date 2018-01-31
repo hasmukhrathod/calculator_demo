@@ -1,23 +1,23 @@
 module CalculatorDemo
   class Calci
     ##perform addition
-    def add(a,b)
-      return a+b
+    def add(*array)
+      array.inject(0) { |sum, x| sum += x }
     end
     ##perform substraction
-    def sub(a,b)
-      return a-b
+    def sub(*array)
+      array.inject(0) { |sum, x| sum -= x }
     end
     
     ##perform multiplication
-    def mul(a,b)
-      return a*b
+    def mul(*array)
+      array.inject(0) { |sum, x| sum *= x }
     end
     
     ##perform division
-    def div(a,b)
+    def div(*array)
       x = begin
-        a / b
+        array.inject(0) { |sum, x| sum /= x }
       rescue ZeroDivisionError
         "You can't divide #{a} by #{b}"
       end
