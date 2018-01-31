@@ -19,7 +19,7 @@ module CalculatorDemo
       x = begin
         array.inject(0) { |sum, x| sum /= x }
       rescue ZeroDivisionError
-        "You can't divide #{a} by #{b}"
+        "You can't divide number with 0"
       end
       return x
     end
